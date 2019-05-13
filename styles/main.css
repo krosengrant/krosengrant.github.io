@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Lora:400,700");
+.top-nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top-nav;
+  padding: 1rem;
+}
+
+.nav-home {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: nav-home;
+}
+
+.nav-work {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav-work;
+  padding: 0 1rem;
+}
+
+.nav-about {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: nav-about;
+  padding: 0 1rem;
+}
+
+.nav-contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: nav-contact;
+  padding: 0 1rem;
+}
+
+.active {
+  padding-bottom: .25rem;
+  border-bottom: 2px solid royalblue;
+}
+
+.grid-body {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: grid-body;
+}
+
+.page-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: page-title;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.btn-view-cs {
+  text-decoration: none;
+  font-weight: bold;
+  color: royalblue;
+}
+
+.tile-quicklit {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: tile-quicklit;
+  border: 1px solid white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+}
+
+.tile-quicklit h5 {
+  margin-bottom: 8px;
+}
+
+.tile-quicklit h2 {
+  margin-top: 8px;
+}
+
+.tile-quicklit p {
+  margin-bottom: 2rem;
+}
+
+.tile-wtw {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: tile-wtw;
+  border: 1px solid white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+}
+
+.tile-wtw h5 {
+  margin-bottom: 8px;
+}
+
+.tile-wtw h2 {
+  margin-top: 8px;
+}
+
+.tile-wtw p {
+  margin-bottom: 2rem;
+}
+
+.tile-nimble {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: tile-nimble;
+  border: 1px solid white;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+}
+
+.tile-nimble h5 {
+  margin-bottom: 8px;
+}
+
+.tile-nimble h2 {
+  margin-top: 8px;
+}
+
+.tile-nimble p {
+  margin-bottom: 2rem;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  font-weight: bold;
+  padding: 2rem 4rem;
+}
+
+footer a {
+  font-weight: bold;
+  color: royalblue;
+  text-decoration: none;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+      grid-template-areas: " top-nav " " grid-body " " footer ";
+}
+
+.top-nav {
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem 4rem;
+  -ms-grid-columns: 2fr 8fr 1fr 1fr 1fr;
+      grid-template-columns: 2fr 8fr 1fr 1fr 1fr;
+      grid-template-areas: " nav-home nav-home nav-work nav-about nav-contact";
+}
+
+.grid-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  grid-row-gap: 2rem;
+      grid-template-areas: " . page-title . " " . tile-quicklit . " " . tile-wtw . " " . tile-nimble . ";
+}
+
+@media only screen and (max-width: 425px) {
+  .grid-container {
+    grid-row-gap: 1rem;
+  }
+  .top-nav {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: " nav-home nav-home nav-home " " nav-work nav-about nav-contact ";
+  }
+  .nav-home, .nav-work, .nav-about, .nav-contact {
+    text-align: center;
+  }
+  .grid-body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+    padding: 0 1.5rem;
+        grid-template-areas: " page-title " " tile-quicklit " " tile-wtw " " tile-nimble ";
+  }
+}
+
+* {
+  font-family: "Karla", sans-serif;
+  color: #2e2e2e;
+}
+
+body {
+  margin: 0;
+}
+
+[class^=nav-]:hover {
+  color: royalblue;
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

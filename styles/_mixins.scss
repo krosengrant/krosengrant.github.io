@@ -1,0 +1,47 @@
+@import "variables.scss";
+
+@mixin page-title() {
+    text-align: center; 
+    padding-bottom: 2rem;
+}
+
+@mixin page-content() {
+    border: 1px solid black;
+}
+
+@mixin active-nav() {
+    padding-bottom: .25rem; 
+    border-bottom: 2px solid $accent-color;
+}
+
+@mixin project-tile() {
+    border: 1px solid white; 
+    border-radius: 15px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); padding: 2rem; 
+    h5 {
+        margin-bottom: 8px;
+    }
+    h2 {
+        margin-top: 8px;
+    }
+    p {
+        margin-bottom: 2rem;
+    }
+}
+
+@mixin btn-view-cs() {
+    text-decoration: none;
+    font-weight: bold;
+    color: $accent-color;
+}
+
+@mixin footer() {
+    font-weight: bold;
+    padding: 2rem 4rem;
+    
+    a {
+        font-weight: bold;
+        color: $accent-color;
+        text-decoration: none;
+    }
+}

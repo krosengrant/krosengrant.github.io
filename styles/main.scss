@@ -1,0 +1,16 @@
+@import "layout.scss";
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Lora:400,700');
+
+* {
+    font-family: $font-stack;
+    color: $text-color;
+}
+
+body {
+    margin: 0;
+}
+
+[class^=nav-]:hover {
+    color: $accent-color;
+    cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@import "mixins.scss";
+
+.top-nav        { grid-area: top-nav; padding: 1rem; }
+.nav-home       { grid-area: nav-home; }
+.nav-work       { grid-area: nav-work; padding: 0 1rem; }
+.nav-about      { grid-area: nav-about; padding: 0 1rem; }
+.nav-contact    { grid-area: nav-contact; padding: 0 1rem; }
+.active         { @include active-nav(); }
+
+.grid-body      { grid-area: grid-body; }
+.page-title     { grid-area: page-title; @include page-title(); }
+.btn-view-cs    { @include btn-view-cs(); }
+
+.tile-quicklit  { grid-area: tile-quicklit; @include project-tile(); }
+.tile-wtw       { grid-area: tile-wtw; @include project-tile(); }
+.tile-nimble    { grid-area: tile-nimble; @include project-tile(); }
+
+footer          { grid-area: footer; @include footer(); }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+    grid-template-areas: 
+    " top-nav "
+    " grid-body "
+    " footer "
+}
+
+// Medium, Large, XL Devices
+.top-nav {
+    display: grid;
+    padding: 2rem 4rem;
+    grid-template-columns: 2fr 8fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    " nav-home nav-home nav-work nav-about nav-contact"
+}
+
+.grid-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-row-gap: 2rem;
+    grid-template-areas:
+    " . page-title . "
+    " . tile-quicklit . "
+    " . tile-wtw . "
+    " . tile-nimble . "
+}
+
+// Small to Large Mobile Devices
+@media only screen and (max-width: 425px) {
+    .grid-container {
+        grid-row-gap: 1rem;
+    }
+
+    .top-nav {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        " nav-home nav-home nav-home "
+        " nav-work nav-about nav-contact ";
+    }
+    
+    .nav-home, .nav-work, .nav-about, .nav-contact {
+        text-align: center;
+    }
+
+    .grid-body {
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+        padding: 0 1.5rem;
+        grid-template-areas:
+        " page-title "
+        " tile-quicklit "
+        " tile-wtw "
+        " tile-nimble "
+    }
+}
+
