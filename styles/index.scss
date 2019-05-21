@@ -1,0 +1,23 @@
+// Home page layout overrides
+
+.grid-body {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+    " . page-title . "
+    " . tile-quicklit . "
+    " . tile-wtw . "
+    " . tile-nimble . "
+}
+
+// Small to Large Mobile Devices
+@media only screen and (max-width: 425px) {
+    .project-img { width: 100%; }
+    .grid-body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        " page-title "
+        " tile-quicklit "
+        " tile-wtw "
+        " tile-nimble "
+    }
+}

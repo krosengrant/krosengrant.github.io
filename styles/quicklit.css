@@ -1,0 +1,19 @@
+.page-title {
+  padding-bottom: 0;
+}
+
+.page-content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: page-content;
+}
+
+.page-title {
+  text-align: left;
+}
+
+.grid-body {
+  grid-row-gap: 1rem;
+      grid-template-areas: " . page-title . " " . page-content . ";
+}
+/*# sourceMappingURL=quicklit.css.map */

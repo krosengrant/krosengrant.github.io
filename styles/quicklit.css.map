@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EAAE,cAAc,EAAE,CAAC;CAAI;;AACnC,AAAA,aAAa,CAAC;EAAE,SAAS,EAAE,YAAY;CAAI;;AAC3C,AAAA,WAAW,CAAC;EAAE,UAAU,EAAE,IAAI;CAAI;;AAElC,AAAA,UAAU,CAAC;EACP,YAAY,EAAE,IAAI;EAClB,mBAAmB,EACnB,uCAEJ;CAAC",
+    "sources": [
+        "quicklit.scss"
+    ],
+    "names": [],
+    "file": "quicklit.css"
+}
