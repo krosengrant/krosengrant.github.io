@@ -20,16 +20,9 @@
   padding: 0 1rem;
 }
 
-.nav-about {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: nav-about;
-  padding: 0 1rem;
-}
-
 .nav-contact {
   -ms-grid-row: 1;
-  -ms-grid-column: 5;
+  -ms-grid-column: 4;
   grid-area: nav-contact;
   padding: 0 1rem;
 }
@@ -156,9 +149,9 @@ footer a {
   display: -ms-grid;
   display: grid;
   padding: 2rem 4rem;
-  -ms-grid-columns: 2fr 8fr 1fr 1fr 1fr;
-      grid-template-columns: 2fr 8fr 1fr 1fr 1fr;
-      grid-template-areas: " nav-home nav-home nav-work nav-about nav-contact";
+  -ms-grid-columns: 2fr 8fr 1fr 1fr;
+      grid-template-columns: 2fr 8fr 1fr 1fr;
+      grid-template-areas: " nav-home nav-home nav-work nav-contact";
 }
 
 .grid-body {
@@ -174,9 +167,9 @@ footer a {
     grid-row-gap: 0rem;
   }
   .top-nav {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: " nav-home nav-home nav-home " " nav-work nav-about nav-contact ";
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: " nav-home nav-home " " nav-work nav-contact ";
   }
   .nav-home, .nav-work, .nav-about, .nav-contact {
     text-align: center;
@@ -186,6 +179,9 @@ footer a {
         grid-template-columns: 1fr;
     grid-row-gap: 1rem;
     padding: 0 1.5rem;
+  }
+  footer {
+    text-align: center;
   }
 }
 
