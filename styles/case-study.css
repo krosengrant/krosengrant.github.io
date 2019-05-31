@@ -36,6 +36,12 @@ td {
   width: 75%;
 }
 
+.img-1-wide {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
 .img-2-container {
   display: -ms-grid;
   display: grid;
