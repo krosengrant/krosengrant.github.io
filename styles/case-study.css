@@ -95,6 +95,16 @@ td {
   grid-area: c;
 }
 
+[class^="img-"] img {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+[class^="img-1"] {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 .btn-link {
   text-decoration: none;
   padding: .5rem 1rem;
@@ -108,5 +118,24 @@ td {
 .btn-link:hover {
   background-color: royalblue;
   color: white;
+}
+
+.business-card {
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 2rem;
+}
+
+.business-card h5 {
+  margin-bottom: 8px;
+}
+
+.business-card h2 {
+  margin-top: 8px;
+}
+
+.business-card p {
+  margin-bottom: 2rem;
 }
 /*# sourceMappingURL=case-study.css.map */

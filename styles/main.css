@@ -51,8 +51,6 @@
 
 .tile-quicklit {
   grid-area: tile-quicklit;
-  background: #fcfcff;
-  border: 1px solid #fcfcff;
   border-radius: 15px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -73,8 +71,6 @@
 
 .tile-wtw {
   grid-area: tile-wtw;
-  background: #fcfcff;
-  border: 1px solid #fcfcff;
   border-radius: 15px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -95,8 +91,6 @@
 
 .tile-nimble {
   grid-area: tile-nimble;
-  background: #fcfcff;
-  border: 1px solid #fcfcff;
   border-radius: 15px;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -151,7 +145,7 @@ footer a {
   padding: 2rem 4rem;
   -ms-grid-columns: 2fr 8fr 1fr 1fr;
       grid-template-columns: 2fr 8fr 1fr 1fr;
-      grid-template-areas: " nav-home nav-home nav-work nav-contact";
+      grid-template-areas: " nav-home nav-home nav-work nav-contact ";
 }
 
 .grid-body {
@@ -192,7 +186,7 @@ footer a {
 
 body {
   margin: 0;
-  background-color: #fafaff;
+  background-color: #fff;
 }
 
 [class^=nav-] a {

@@ -4,7 +4,6 @@
 
 .page-content { grid-area: page-content; }
 
-
 .grid-body {
     grid-row-gap: 1rem;
     grid-template-areas: 
@@ -80,6 +79,16 @@ td {
     grid-area: c;
 }
 
+// Add box shadow to screenshots
+[class^="img-"] img {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  // Citation (1)
+}
+
+[class^="img-1"] {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  // Citation (1)
+}
+
+
 .btn-link {
     @include btn-link();
 }
@@ -89,3 +98,11 @@ td {
     color: white;
 
 }
+
+// Contact Page
+.business-card {
+    @include project-tile();
+}
+
+// Citations:
+// (1) - Material design box shadow: https://codepen.io/sdthornton/pen/wBZdXq

@@ -8,7 +8,7 @@
 
 .grid-body      { grid-area: grid-body; }
 .page-title     { grid-area: page-title; @include page-title(); }
-.btn-flat    { @include btn-flat(); }
+.btn-flat       { @include btn-flat(); }
 
 .tile-quicklit  { grid-area: tile-quicklit; @include project-tile(); }
 .tile-wtw       { grid-area: tile-wtw; @include project-tile(); }
@@ -32,7 +32,7 @@ footer          { grid-area: footer; @include footer(); }
     padding: 2rem 4rem;
     grid-template-columns: 2fr 8fr 1fr 1fr;
     grid-template-areas: 
-    " nav-home nav-home nav-work nav-contact"
+    " nav-home nav-home nav-work nav-contact "
 }
 
 .grid-body {

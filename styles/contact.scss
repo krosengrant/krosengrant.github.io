@@ -1,0 +1,17 @@
+// Contact page layout overrides
+
+@import "mixins.scss";
+
+@media only screen and (max-width: 425px) {
+    .grid-body {
+        display: block;
+        padding: 0;
+    }
+    .page-title {
+        grid-template-columns: 1fr;
+        grid-row-gap: 0rem;
+        padding: 0 1.5rem;
+        padding: 0;
+        margin: 0;
+    }
+}
