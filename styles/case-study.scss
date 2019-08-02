@@ -93,10 +93,13 @@ td {
     @include btn-link();
 }
 
+.btn-right {
+    @include btn-right();
+}
+
 .btn-link:hover {
     background-color: $accent-color;
     color: white;
-
 }
 
 // Contact Page

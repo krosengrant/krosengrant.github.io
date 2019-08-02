@@ -115,6 +115,15 @@ td {
   color: royalblue;
 }
 
+.btn-right {
+  text-decoration: none;
+  padding: .5rem 1rem;
+  margin-top: 4rem;
+  border-radius: 25px;
+  font-weight: bold;
+  color: royalblue;
+}
+
 .btn-link:hover {
   background-color: royalblue;
   color: white;
