@@ -1,9 +1,12 @@
 @import "mixins.scss";
 
-.page-title { padding-bottom: 0; }
+/* Case Study Page Header */
+.page-title    { grid-area: page-title; padding-bottom: 0; border-radius: 30px; }
+.page-content  { grid-area: page-content;  }
+.page-subtitle { color: $subtitle-color; }
+.page-overview { @include neumorphic-effect(); padding: 2rem; border-radius: 30px; margin-bottom: 6rem; margin-top: 2rem; h3 { text-align: center; margin-top: 1rem; } }
 
-.page-content { grid-area: page-content; }
-
+// Page Layout
 .grid-body {
     grid-row-gap: 1rem;
     grid-template-areas: 
@@ -11,101 +14,90 @@
     " . page-content . "
 }
 
-table {
-    margin-bottom: 2rem;
-}
+/* Overview */
+table           { margin-bottom: 2rem; margin: 0 auto; }     // Overview table
+td:first-child  { font-weight: bold; text-align: right; font-family: $font-stack; }    // Row label
+td              { padding: 1rem 1.5rem 1rem 0; }             // Row content
 
-td:first-child {
-    font-weight: bold;
-}
 
-td {
-    padding: 1rem 1.5rem 1rem 0; 
-}
+/*** Image Layouts ***/
+/* 1 column */
+.img-1 { display: grid; margin: 0 auto; width: 75%; }
+.img-1-wide { display: grid; width: 100%; }
 
-.page-subtitle {
-    color: gray;
-}
-
-.img-1 {
-    display: grid;
-    margin: 0 auto;
-    width: 75%;
-}
-
-.img-1-wide {
-    display: grid;
-    width: 100%;
-}
-
+/* 2 columns */
 .img-2-container {
     display: grid;
     grid-column-gap: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     " a b ";
+
+    .img-2-a { width: 100%; grid-area: a; }    // Left image
+    .img-2-b { width: 100%; grid-area: b; }    // Right image
 }
 
-.img-2-a {
-    width: 100%;
-    grid-area: a;
-}
-
-.img-2-b {
-    width: 100%;
-    grid-area: b;
-}
-
+/* 3 columns */
 .img-3-container {
     display: grid;
     grid-column-gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
     " a b c ";
-}
 
-.img-3-a {
-    width: 100%;
-    grid-area: a;
-}
-
-.img-3-b {
-    width: 100%;
-    grid-area: b;
-}
-
-.img-3-c {
-    width: 100%;
-    grid-area: c;
-}
-
-// Add box shadow to screenshots
-[class^="img-"] img {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  // Citation (1)
-}
-
-[class^="img-1"] {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  // Citation (1)
+    .img-3-a { width: 100%; grid-area: a; }    // Left image
+    .img-3-b { width: 100%; grid-area: b; }    // Middle image
+    .img-3-c { width: 100%; grid-area: c; }    // Right Image
 }
 
 
-.btn-link {
-    @include btn-link();
+/* Other Styling */
+// Shadows for case study images
+[class^="img-"] img { @include material-shadow(); }
+[class^="img-1"] { @include material-shadow(); }
+
+
+/* Button Styling */
+// Default states
+
+.btn-link { @include btn-link(); }
+.btn-next { @include btn-next(); }
+
+// Button hover statess
+.btn-link:hover { @include material-shadow(); background-color: $hover-color; }
+.btn-next:hover { color: $hover-color; }
+
+
+/* Contact Page */
+// .business-card { @include project-tile(); }
+
+// Add a caption to the wrapper diagram in the TMC case study
+#tmc-diagram-wrapper:after {    
+    content: "Wrapper model of product";    // Caption content
+    @include caption-styling();
 }
 
-.btn-right {
-    @include btn-right();
+#tmc-wireframe-1:before {
+    content: "Phase 1: Outline content";
+    @include caption-styling();
 }
 
-.btn-link:hover {
-    background-color: $accent-color;
-    color: white;
+#tmc-wireframe-2:before {
+    content: "Phase 2: Page structure";
+    @include caption-styling();
 }
 
-// Contact Page
-.business-card {
-    @include project-tile();
+#tmc-wireframe-3:before {
+    content: "Phase 3: Some copy updates";
+    @include caption-styling();
 }
 
-// Citations:
-// (1) - Material design box shadow: https://codepen.io/sdthornton/pen/wBZdXq
+#tmc-mockup-1:before {
+    content: "Before switch to subscription model";
+    @include caption-styling();
+}
+
+#tmc-mockup-2:before {
+    content: "After switch to subscription model";
+    @include caption-styling();
+}

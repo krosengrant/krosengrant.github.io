@@ -1,7 +1,45 @@
+/* 
+
+Home Page
+- Add or rearrange tiles here
+
+Note: Add project tiles twice, once for desktop and once for mobile.
+
+*/
+/* Variables */
+/* Fonts */
+/* Colors */
+/* Color Archive */
+.page-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: page-title;
+}
+
+.tile-tmc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: tile-tmc;
+}
+
+.tile-quicklit {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: tile-quicklit;
+}
+
+.tile-wtw {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: tile-wtw;
+}
+
 .grid-body {
+  background-color: #E0E5EC;
+  background-color: ghostwhite;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas: " . page-title . " " . tile-quicklit . " " . tile-wtw . " " . tile-nimble . ";
+      grid-template-areas: " . page-title . " " . tile-tmc . " " . tile-quicklit . " " . tile-wtw . ";
 }
 
 @media only screen and (max-width: 425px) {
@@ -11,7 +49,7 @@
   .grid-body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: " page-title " " tile-quicklit " " tile-wtw " " tile-nimble ";
+        grid-template-areas: " page-title " " tile-tmc " " tile-quicklit " " tile-wtw ";
   }
 }
 /*# sourceMappingURL=index.css.map */

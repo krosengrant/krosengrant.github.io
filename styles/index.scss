@@ -1,23 +1,41 @@
-// Home page layout overrides
+/* 
 
+Home Page
+- Add or rearrange tiles here
+
+Note: Add project tiles twice, once for desktop and once for mobile.
+
+*/
+@import "variables.scss";
+
+.page-title { grid-area: page-title; }
+.tile-tmc { grid-area: tile-tmc; }
+.tile-quicklit { grid-area: tile-quicklit; }
+.tile-wtw { grid-area: tile-wtw; }
+
+// Layout of Home Page
 .grid-body {
+    background-color:#E0E5EC;
+    background-color: $background-color;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas:
+    /* [ Add a new project tile here ] */
     " . page-title . "
+    " . tile-tmc . "
     " . tile-quicklit . "
     " . tile-wtw . "
-    " . tile-nimble . "
 }
 
-// Small to Large Mobile Devices
+// Overrides for Small to Large Mobile Devices
 @media only screen and (max-width: 425px) {
     .project-img { width: 100%; }
     .grid-body {
         grid-template-columns: 1fr;
         grid-template-areas:
+        /* [ Add a new project tile here ] */
         " page-title "
+        " tile-tmc "
         " tile-quicklit "
         " tile-wtw "
-        " tile-nimble "
     }
 }

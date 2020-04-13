@@ -1,3 +1,19 @@
-$font-stack: 'Karla', sans-serif;
-$text-color: #2e2e2e;
-$accent-color:  royalblue;
+/* Variables */
+
+/* Fonts */
+$font-stack: 'cronos-pro',  sans-serif;
+$font-secondary: 'nunito-sans', sans-serif;
+
+/* Colors */
+$text-color: #0f0f0f;   // 04-08-2020: was #2e2e2e
+$accent-color: darkblue;
+$subtitle-color: lighten($text-color, 50%);
+$background-color: ghostwhite;
+$shadow-color: darken($background-color, 5%);
+$highlight-color: lighten($background-color, 15%);
+$hover-color: darken($accent-color, 5%);
+
+/* Color Archive */
+// $background-color: #E0E5EC;
+// $accent-color:  royalblue;
+// $highlight-color: rgba(255, 255, 255, 0.5);

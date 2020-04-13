@@ -1,73 +1,137 @@
 @import "variables.scss";
 
-@mixin home-grid-container() {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 2rem;
-}
-
-@mixin page-title() {
-    text-align: center; 
-}
-
-@mixin page-content() {
-    border: 1px solid black;
-}
-
-@mixin active-nav() {
-    padding-bottom: .25rem; 
-    border-bottom: 2px solid $accent-color;
-}
-
 @mixin project-tile() {
     border-radius: 15px; 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); 
-    padding: 2rem; 
-    h5 {
-        margin-bottom: 8px;
-    }
-    h2 {
-        margin-top: 8px;
-    }
-    p {
-        margin-bottom: 2rem;
-    }
+    padding: 4rem; 
+
+    h5 { margin-bottom: .5rem; margin-top: 3rem; }
+    h2 { margin-bottom: .75rem; margin-top: .5rem; }
+    p  { margin-bottom: 2.5rem; margin-top: 2px; }
+
+    @include neumorphic-inverted();
 }
 
-@mixin btn-flat() {
+@mixin project-tile-small() {
+    border-radius: 10px;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+
+    h5 { margin-bottom: .5rem; margin-top: 3rem; }
+    h2 { margin-bottom: .75rem; margin-top: .5rem; }
+    p  { margin-bottom: 2.5rem; margin-top: 2px; }
+
+    @include neumorphic-inverted();
+}
+
+/* Button Styling */
+@mixin btn-flat() {     // "Read Case Study"
     text-decoration: none;
     font-weight: bold;
     color: $accent-color;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+
+    @include neumorphic-effect();
 }
 
-@mixin btn-link() {
+@mixin btn-link() {    // External link to prototype or website
+    text-decoration: none;
+    padding: .75rem 2rem;
+    margin-top: 4rem;
+    border-radius: 40px;
+    background-color: $accent-color;
+    // border: 2px solid $accent-color;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1.25px;
+    font-family: $font-secondary;
+}
+
+@mixin btn-next() {      // "Read Next Case Study -->"
     text-decoration: none;
     padding: .5rem 1rem;
     margin-top: 4rem;
     border-radius: 25px;
-    // background-color: $accent-color;
-    border: 2px solid $accent-color;
     font-weight: bold;
-    color: $accent-color;
-    // color: white;
-}
-
-@mixin btn-right() {
-    text-decoration: none;
-    padding: .5rem 1rem;
-    margin-top: 4rem;
-    border-radius: 25px;
-    font-weight: bold;
+    font-size: 1.1rem;
     color: $accent-color;
 }
 
 @mixin footer() {
+    
+    display: grid;
+    .footer-left  { grid-area: footer-left;  }
+    .footer-right { grid-area: footer-right; text-align: right; p { font-family: $font-secondary; font-size: smaller; color: rgba($text-color, .3)} }
+    .footer-date  { font-family: $font-secondary; font-size: smaller; color: rgba($text-color, .3); }
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+    " footer-left . footer-right ";
+    
+    background-color: $shadow-color;
     font-weight: bold;
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
+    margin-top: 7rem;
+
+    p {
+        font-family: $font-stack;
+        margin-bottom: .25rem;
+        color: rgba($text-color, .9);
+    }
     
     a {
+        font-family: $font-secondary;
+        margin-top: none;
         font-weight: bold;
         color: $accent-color;
         text-decoration: none;
     }
+
+    a:hover { color: $hover-color }
 }
+
+@mixin material-shadow() { // Adapted from Citation (1)
+    box-shadow: 0 4px 6px $shadow-color, 0 1px 2px $highlight-color;
+}
+
+@mixin neumorphic-effect() {
+    /* For Neumorphism Effect - Citation (2) */
+      background-color: $background-color;
+    -webkit-box-shadow: 9px 9px 16px $shadow-color, -9px -9px 16px $highlight-color;
+            box-shadow: 9px 9px 16px $shadow-color, -9px -9px 16px $highlight-color;
+    /* For Neumorphism Effect  - Citation (2) */
+}
+
+@mixin neumorphic-inverted() {
+    /* Adapted from (2) */
+    background-color: $background-color;
+  -webkit-box-shadow: 4px 4px 8px inset $shadow-color, -4px -4px 8px inset $highlight-color;
+          box-shadow: 4px 4px 8px inset $shadow-color, -4px -4px 8px inset $highlight-color;
+    /* Adapted from (2) */
+}
+
+@mixin transition-ease() {
+    transition: background-color 3s ease-in-out;
+    transition: -webkit-box-shadow 3s ease-in-out;
+    transition: box-shadow 3s ease-in-out;
+}
+
+@mixin caption-styling() {
+    display: block;
+    color: $subtitle-color;
+    padding: 15px;
+    font-style: italic;
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+// Citations:
+// (1) - Material design box shadow: https://codepen.io/sdthornton/pen/wBZdXq 
+// (2) - Neumorphism in user interface: https://uxplanet.org/neumorphism-in-user-interface-tutorial-c353698ac5c0
+
+// Archive:
+// Old material box shadow: 
+// box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);  // Citation (1)

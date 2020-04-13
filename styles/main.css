@@ -1,9 +1,44 @@
-@import url("https://fonts.googleapis.com/css?family=Karla:400,700|Lora:400,700");
+/* 
+
+Site-wide Default Values
+-- Fonts
+-- Color
+-- Background color
+-- Spacing
+----- Paragraphs
+----- Heading 3
+----- List elements
+-- Navigation buttons
+----- Appearance
+----- Hover behavior
+
+*/
+/* Variables */
+/* Fonts */
+/* Colors */
+/* Color Archive */
+/* Button Styling */
+/* Page Styling */
+@import url("https://use.typekit.net/kqi3wlo.css");
+.grid-body {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: grid-body;
+}
+
+.page-title {
+  grid-area: page-title;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Top Navigation */
 .top-nav {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: top-nav;
   padding: 1rem;
+  font-size: 1.1rem;
 }
 
 .nav-home {
@@ -28,85 +63,89 @@
 }
 
 .active {
-  padding-bottom: .25rem;
-  border-bottom: 2px solid royalblue;
+  padding-bottom: .5rem;
+  border-bottom: 4px solid #dfdfff;
+  color: darkblue;
 }
 
-.grid-body {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: grid-body;
+/* Project Tiles */
+/* Add new project tile here */
+.tile-tmc {
+  grid-area: tile-tmc;
+  border-radius: 15px;
+  padding: 4rem;
+  /* Adapted from (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  /* Adapted from (2) */
 }
 
-.page-title {
-  grid-area: page-title;
-  text-align: center;
+.tile-tmc h5 {
+  margin-bottom: .5rem;
+  margin-top: 3rem;
 }
 
-.btn-flat {
-  text-decoration: none;
-  font-weight: bold;
-  color: royalblue;
+.tile-tmc h2 {
+  margin-bottom: .75rem;
+  margin-top: .5rem;
+}
+
+.tile-tmc p {
+  margin-bottom: 2.5rem;
+  margin-top: 2px;
 }
 
 .tile-quicklit {
   grid-area: tile-quicklit;
   border-radius: 15px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2rem;
+  padding: 4rem;
+  /* Adapted from (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  /* Adapted from (2) */
 }
 
 .tile-quicklit h5 {
-  margin-bottom: 8px;
+  margin-bottom: .5rem;
+  margin-top: 3rem;
 }
 
 .tile-quicklit h2 {
-  margin-top: 8px;
+  margin-bottom: .75rem;
+  margin-top: .5rem;
 }
 
 .tile-quicklit p {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2px;
 }
 
 .tile-wtw {
   grid-area: tile-wtw;
   border-radius: 15px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2rem;
+  padding: 4rem;
+  /* Adapted from (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  /* Adapted from (2) */
 }
 
 .tile-wtw h5 {
-  margin-bottom: 8px;
+  margin-bottom: .5rem;
+  margin-top: 3rem;
 }
 
 .tile-wtw h2 {
-  margin-top: 8px;
+  margin-bottom: .75rem;
+  margin-top: .5rem;
 }
 
 .tile-wtw p {
-  margin-bottom: 2rem;
-}
-
-.tile-nimble {
-  grid-area: tile-nimble;
-  border-radius: 15px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2rem;
-}
-
-.tile-nimble h5 {
-  margin-bottom: 8px;
-}
-
-.tile-nimble h2 {
-  margin-top: 8px;
-}
-
-.tile-nimble p {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2px;
 }
 
 .project-img {
@@ -117,18 +156,82 @@
   margin: 0 auto;
 }
 
+.btn-flat {
+  text-decoration: none;
+  font-weight: bold;
+  color: darkblue;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  /* For Neumorphism Effect - Citation (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 9px 9px 16px #dfdfff, -9px -9px 16px white;
+  box-shadow: 9px 9px 16px #dfdfff, -9px -9px 16px white;
+  /* For Neumorphism Effect  - Citation (2) */
+}
+
+.btn-flat:hover {
+  /* Adapted from (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+  /* Adapted from (2) */
+}
+
 footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-areas: " footer-left . footer-right ";
+  background-color: #dfdfff;
   font-weight: bold;
-  padding: 2rem 4rem;
+  padding: 4rem 4rem;
+  margin-top: 7rem;
+}
+
+footer .footer-left {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: footer-left;
+}
+
+footer .footer-right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: footer-right;
+  text-align: right;
+}
+
+footer .footer-right p {
+  font-family: "nunito-sans", sans-serif;
+  font-size: smaller;
+  color: rgba(15, 15, 15, 0.3);
+}
+
+footer .footer-date {
+  font-family: "nunito-sans", sans-serif;
+  font-size: smaller;
+  color: rgba(15, 15, 15, 0.3);
+}
+
+footer p {
+  font-family: "cronos-pro", sans-serif;
+  margin-bottom: .25rem;
+  color: rgba(15, 15, 15, 0.9);
 }
 
 footer a {
+  font-family: "nunito-sans", sans-serif;
+  margin-top: none;
   font-weight: bold;
-  color: royalblue;
+  color: darkblue;
   text-decoration: none;
+}
+
+footer a:hover {
+  color: #000072;
 }
 
 .grid-container {
@@ -139,62 +242,149 @@ footer a {
       grid-template-areas: " top-nav " " grid-body " " footer ";
 }
 
-.top-nav {
-  display: -ms-grid;
-  display: grid;
-  padding: 2rem 4rem;
-  -ms-grid-columns: 2fr 8fr 1fr 1fr;
-      grid-template-columns: 2fr 8fr 1fr 1fr;
-      grid-template-areas: " nav-home nav-home nav-work nav-contact ";
-}
-
 .grid-body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 3fr 1fr;
       grid-template-columns: 1fr 3fr 1fr;
-  grid-row-gap: 3rem;
+  grid-row-gap: 6rem;
+}
+
+.top-nav {
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem 4rem;
+  -ms-grid-columns: 2fr 6fr 2fr 1fr;
+      grid-template-columns: 2fr 6fr 2fr 1fr;
+      grid-template-areas: " nav-home nav-home nav-work nav-contact ";
 }
 
 @media only screen and (max-width: 425px) {
   .grid-container {
     grid-row-gap: 0rem;
   }
-  .top-nav {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: " nav-home nav-home " " nav-work nav-contact ";
-  }
-  .nav-home, .nav-work, .nav-about, .nav-contact {
-    text-align: center;
-  }
   .grid-body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-row-gap: 1rem;
     padding: 0 1.5rem;
+    padding: 0.5rem;
+  }
+  .top-nav {
+    padding: .5rem;
+    margin: 0rem;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: " nav-home nav-home " " nav-work nav-contact ";
+  }
+  /* Navigation Buttons on mobile*/
+  .nav-home, .nav-work, .nav-about, .nav-contact {
+    text-align: center;
+    padding: 0rem;
+  }
+  [class^=tile-] {
+    border-radius: 10px;
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+    /* Adapted from (2) */
+    background-color: ghostwhite;
+    -webkit-box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+    box-shadow: 4px 4px 8px inset #dfdfff, -4px -4px 8px inset white;
+    /* Adapted from (2) */
+  }
+  [class^=tile-] h5 {
+    margin-bottom: .5rem;
+    margin-top: 3rem;
+  }
+  [class^=tile-] h2 {
+    margin-bottom: .75rem;
+    margin-top: .5rem;
+  }
+  [class^=tile-] p {
+    margin-bottom: 2.5rem;
+    margin-top: 2px;
   }
   footer {
     text-align: center;
   }
+  footer .footer-right {
+    display: none;
+  }
 }
 
+/* Variables */
+/* Fonts */
+/* Colors */
+/* Color Archive */
 * {
-  font-family: "Karla", sans-serif;
-  color: #2e2e2e;
+  font-family: "cronos-pro", sans-serif;
+  color: #0f0f0f;
+  letter-spacing: 1px;
 }
 
 body {
   margin: 0;
   background-color: #fff;
+  background-color: #E0E5EC;
+  background-color: ghostwhite;
 }
 
+/* 04-07-2020: New Layout Adjustments */
+h3 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+p {
+  line-height: 1.8;
+  margin-top: 1.5rem;
+}
+
+/* 04-08-2020: Font overrides for secondary font */
+p, td, b, li {
+  font-family: "nunito-sans", sans-serif;
+  letter-spacing: reset;
+}
+
+p a {
+  font-family: "nunito-sans", sans-serif;
+  font-weight: 700;
+}
+
+td a {
+  font-family: "nunito-sans", sans-serif;
+  font-weight: 700;
+}
+
+b {
+  font-weight: 700;
+}
+
+li {
+  margin-bottom: .25rem;
+  font-size: 90%;
+}
+
+em {
+  font-family: "nunito-sans", sans-serif;
+}
+
+:before {
+  font-family: "nunito-sans", sans-serif;
+}
+
+:after {
+  font-family: "nunito-sans", sans-serif;
+}
+
+/* Navigation Button Styling */
 [class^=nav-] a {
   text-decoration: none;
 }
 
 [class^=nav-] a:hover {
-  color: royalblue;
+  color: darkblue;
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

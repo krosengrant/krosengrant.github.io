@@ -1,22 +1,28 @@
 @import "mixins.scss";
 
-.top-nav        { grid-area: top-nav; padding: 1rem; }
+/* Page Styling */
+.grid-body      { grid-area: grid-body; }
+.page-title     { grid-area: page-title; text-align: center; margin-top: 1.5rem; }
+
+/* Top Navigation */
+.top-nav        { grid-area: top-nav; padding: 1rem; font-size: 1.1rem; }
 .nav-home       { grid-area: nav-home; }
 .nav-work       { grid-area: nav-work; padding: 0 1rem; }
 .nav-contact    { grid-area: nav-contact; padding: 0 1rem; }
-.active         { @include active-nav(); }
+.active         { padding-bottom: .5rem; border-bottom: 4px solid $shadow-color; color: $accent-color; }   // Active Navigation Link
 
-.grid-body      { grid-area: grid-body; }
-.page-title     { grid-area: page-title; @include page-title(); }
-.btn-flat       { @include btn-flat(); }
-
+/* Project Tiles */
+/* Add new project tile here */
+.tile-tmc       { grid-area: tile-tmc; @include project-tile(); }    // 04-06-2020: New
 .tile-quicklit  { grid-area: tile-quicklit; @include project-tile(); }
 .tile-wtw       { grid-area: tile-wtw; @include project-tile(); }
-.tile-nimble    { grid-area: tile-nimble; @include project-tile(); }
 .project-img    { width: 70%; display: flex; margin: 0 auto; }
+.btn-flat       { @include btn-flat(); &:hover { @include neumorphic-inverted(); } }
 
 footer          { grid-area: footer; @include footer(); }
 
+
+// Medium, Large, XL Devices (Default)
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -26,46 +32,48 @@ footer          { grid-area: footer; @include footer(); }
     " footer "
 }
 
-// Medium, Large, XL Devices
+.grid-body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-row-gap: 6rem;    // 04-06-2020: was 3rem
+}
+
 .top-nav {
     display: grid;
     padding: 2rem 4rem;
-    grid-template-columns: 2fr 8fr 1fr 1fr;
+    grid-template-columns: 2fr 6fr 2fr 1fr; // 04-08-2020: was 2fr 8fr 1fr 1fr
     grid-template-areas: 
     " nav-home nav-home nav-work nav-contact "
 }
 
-.grid-body {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-row-gap: 3rem;
-}
 
-// Small to Large Mobile Devices
+
+// Overrides for Small to Large Mobile Devices
 @media only screen and (max-width: 425px) {
-    .grid-container {
-        grid-row-gap: 0rem;
+    .grid-container { grid-row-gap: 0rem; }
+
+    .grid-body {
+        
+        grid-template-columns: 1fr;
+        grid-row-gap: 1rem;
+        padding: 0 1.5rem;
+        padding: 0.5rem;
     }
 
     .top-nav {
+        padding: .5rem;
+        margin: 0rem;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
         " nav-home nav-home "
         " nav-work nav-contact ";
     }
     
-    .nav-home, .nav-work, .nav-about, .nav-contact {
-        text-align: center;
-    }
+    /* Navigation Buttons on mobile*/
+    .nav-home, .nav-work, .nav-about, .nav-contact { text-align: center; padding: 0rem; }
 
-    .grid-body {
-        grid-template-columns: 1fr;
-        grid-row-gap: 1rem;
-        padding: 0 1.5rem;
-    }
+    [class^=tile-] { @include project-tile-small(); }
 
-    footer {
-        text-align: center;
-    }
+    footer { text-align: center; .footer-right { display: none; } }
 }
 

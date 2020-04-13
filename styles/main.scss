@@ -1,20 +1,58 @@
+/* 
+
+Site-wide Default Values
+-- Fonts
+-- Color
+-- Background color
+-- Spacing
+----- Paragraphs
+----- Heading 3
+----- List elements
+-- Navigation buttons
+----- Appearance
+----- Hover behavior
+
+*/
+
 @import "layout.scss";
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Lora:400,700');
+@import "variables.scss";
+
+// @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Lora:400,700'); // 04-07-2020: old font 'Karla'
+
+@import url("https://use.typekit.net/kqi3wlo.css");
+
 
 * {
     font-family: $font-stack;
     color: $text-color;
+    letter-spacing: 1px;
 }
 
 body {
     margin: 0;
     background-color: #fff;
+    background-color:#E0E5EC;
+    background-color: $background-color;
 }
 
-[class^=nav-] a {
-    text-decoration: none;
-}
+/* 04-07-2020: New Layout Adjustments */
+h3 { margin-top: 2rem; font-size: 1.6rem; }
+p  { line-height: 1.8; margin-top: 1.5rem; }
 
+
+/* 04-08-2020: Font overrides for secondary font */
+p, td, b, li { font-family: $font-secondary; letter-spacing: reset; }
+p  { a { font-family: $font-secondary; font-weight: 700; } }
+td { a { font-family: $font-secondary; font-weight: 700; } }
+b  { font-weight: 700; }
+li { margin-bottom: .25rem; font-size: 90%; }
+em { font-family: $font-secondary; }
+:before { font-family: $font-secondary; }
+:after  { font-family: $font-secondary; }
+
+
+/* Navigation Button Styling */
+[class^=nav-] a { text-decoration: none; }
 [class^=nav-] a:hover {
     color: $accent-color;
     cursor: pointer;

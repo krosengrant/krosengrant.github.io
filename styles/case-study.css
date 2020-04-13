@@ -1,5 +1,15 @@
+/* Variables */
+/* Fonts */
+/* Colors */
+/* Color Archive */
+/* Button Styling */
+/* Case Study Page Header */
 .page-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: page-title;
   padding-bottom: 0;
+  border-radius: 30px;
 }
 
 .page-content {
@@ -8,27 +18,50 @@
   grid-area: page-content;
 }
 
+.page-subtitle {
+  color: #8f8f8f;
+}
+
+.page-overview {
+  /* For Neumorphism Effect - Citation (2) */
+  background-color: ghostwhite;
+  -webkit-box-shadow: 9px 9px 16px #dfdfff, -9px -9px 16px white;
+  box-shadow: 9px 9px 16px #dfdfff, -9px -9px 16px white;
+  /* For Neumorphism Effect  - Citation (2) */
+  padding: 2rem;
+  border-radius: 30px;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+}
+
+.page-overview h3 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
 .grid-body {
   grid-row-gap: 1rem;
       grid-template-areas: " . page-title . " " . page-content . ";
 }
 
+/* Overview */
 table {
   margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 td:first-child {
   font-weight: bold;
+  text-align: right;
+  font-family: "cronos-pro", sans-serif;
 }
 
 td {
   padding: 1rem 1.5rem 1rem 0;
 }
 
-.page-subtitle {
-  color: gray;
-}
-
+/*** Image Layouts ***/
+/* 1 column */
 .img-1 {
   display: -ms-grid;
   display: grid;
@@ -42,6 +75,7 @@ td {
   width: 100%;
 }
 
+/* 2 columns */
 .img-2-container {
   display: -ms-grid;
   display: grid;
@@ -51,20 +85,21 @@ td {
       grid-template-areas: " a b ";
 }
 
-.img-2-a {
+.img-2-container .img-2-a {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: a;
 }
 
-.img-2-b {
+.img-2-container .img-2-b {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: b;
 }
 
+/* 3 columns */
 .img-3-container {
   display: -ms-grid;
   display: grid;
@@ -74,77 +109,135 @@ td {
       grid-template-areas: " a b c ";
 }
 
-.img-3-a {
+.img-3-container .img-3-a {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: a;
 }
 
-.img-3-b {
+.img-3-container .img-3-b {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: b;
 }
 
-.img-3-c {
+.img-3-container .img-3-c {
   width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: c;
 }
 
+/* Other Styling */
 [class^="img-"] img {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
 }
 
 [class^="img-1"] {
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
 }
 
+/* Button Styling */
 .btn-link {
   text-decoration: none;
-  padding: .5rem 1rem;
+  padding: .75rem 2rem;
   margin-top: 4rem;
-  border-radius: 25px;
-  border: 2px solid royalblue;
+  border-radius: 40px;
+  background-color: darkblue;
   font-weight: bold;
-  color: royalblue;
+  color: white;
+  letter-spacing: 1.25px;
+  font-family: "nunito-sans", sans-serif;
 }
 
-.btn-right {
+.btn-next {
   text-decoration: none;
   padding: .5rem 1rem;
   margin-top: 4rem;
   border-radius: 25px;
   font-weight: bold;
-  color: royalblue;
+  font-size: 1.1rem;
+  color: darkblue;
 }
 
 .btn-link:hover {
-  background-color: royalblue;
-  color: white;
+  -webkit-box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dfdfff, 0 1px 2px white;
+  background-color: #000072;
 }
 
-.business-card {
-  border-radius: 15px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  padding: 2rem;
+.btn-next:hover {
+  color: #000072;
 }
 
-.business-card h5 {
-  margin-bottom: 8px;
+/* Contact Page */
+#tmc-diagram-wrapper:after {
+  content: "Wrapper model of product";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.business-card h2 {
-  margin-top: 8px;
+#tmc-wireframe-1:before {
+  content: "Phase 1: Outline content";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.business-card p {
-  margin-bottom: 2rem;
+#tmc-wireframe-2:before {
+  content: "Phase 2: Page structure";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tmc-wireframe-3:before {
+  content: "Phase 3: Some copy updates";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tmc-mockup-1:before {
+  content: "Before switch to subscription model";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#tmc-mockup-2:before {
+  content: "After switch to subscription model";
+  display: block;
+  color: #8f8f8f;
+  padding: 15px;
+  font-style: italic;
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=case-study.css.map */

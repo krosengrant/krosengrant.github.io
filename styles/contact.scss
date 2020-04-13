@@ -1,7 +1,15 @@
-// Contact page layout overrides
+/* 
+
+Contact Page 
+-- Layout Overrides
+----- Grid Body
+----- Page Title
+
+*/
 
 @import "mixins.scss";
 
+// Overrides for Small Mobile Devices
 @media only screen and (max-width: 425px) {
     .grid-body {
         display: block;
