@@ -21,7 +21,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
     grid-template-areas:
     /* [ Add a new project tile here ] */
     " . page-title . "
-    // " . tile-tmc . "
+    " . tile-tmc . "
     " . tile-quicklit . "
     " . tile-wtw . "
 }
@@ -34,7 +34,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
         grid-template-areas:
         /* [ Add a new project tile here ] */
         " page-title "
-        // " tile-tmc "
+        " tile-tmc "
         " tile-quicklit "
         " tile-wtw "
     }

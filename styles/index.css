@@ -17,17 +17,19 @@ Note: Add project tiles twice, once for desktop and once for mobile.
 }
 
 .tile-tmc {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
   grid-area: tile-tmc;
 }
 
 .tile-quicklit {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: tile-quicklit;
 }
 
 .tile-wtw {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 2;
   grid-area: tile-wtw;
 }
@@ -37,7 +39,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
   background-color: ghostwhite;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas: " . page-title . " " . tile-quicklit . " " . tile-wtw . ";
+      grid-template-areas: " . page-title . " " . tile-tmc . " " . tile-quicklit . " " . tile-wtw . ";
 }
 
 @media only screen and (max-width: 425px) {
@@ -47,7 +49,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
   .grid-body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: " page-title " " tile-quicklit " " tile-wtw ";
+        grid-template-areas: " page-title " " tile-tmc " " tile-quicklit " " tile-wtw ";
   }
 }
 /*# sourceMappingURL=index.css.map */
