@@ -6,9 +6,9 @@ $font-secondary: 'nunito-sans', sans-serif;
 
 /* Colors */
 $text-color: #0f0f0f;   // 04-08-2020: was #2e2e2e
-$accent-color: darkblue;
+$accent-color: rgb(92, 172, 193);  // Color
 $subtitle-color: lighten($text-color, 50%);
-$background-color: ghostwhite;
+$background-color: lighten($text-color, 95%);
 $shadow-color: darken($background-color, 5%);
 $highlight-color: lighten($background-color, 15%);
 $hover-color: darken($accent-color, 5%);
