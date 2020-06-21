@@ -64,8 +64,14 @@ Site-wide Default Values
 
 .active {
   padding-bottom: .5rem;
-  border-bottom: 4px solid #f2f2f2;
-  color: #5cacc1;
+  border-bottom: 4px solid #dbdbdb;
+  color: #4e9dca;
+}
+
+.active {
+  padding-bottom: .5rem;
+  border-bottom: 4px solid #d8e9f3;
+  color: #4e9dca;
 }
 
 /* Project Tiles */
@@ -75,9 +81,9 @@ Site-wide Default Values
   border-radius: 15px;
   padding: 4rem;
   /* Adapted from (2) */
-  background-color: white;
-  -webkit-box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
-  box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
   /* Adapted from (2) */
 }
 
@@ -101,9 +107,9 @@ Site-wide Default Values
   border-radius: 15px;
   padding: 4rem;
   /* Adapted from (2) */
-  background-color: white;
-  -webkit-box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
-  box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
   /* Adapted from (2) */
 }
 
@@ -127,9 +133,9 @@ Site-wide Default Values
   border-radius: 15px;
   padding: 4rem;
   /* Adapted from (2) */
-  background-color: white;
-  -webkit-box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
-  box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
   /* Adapted from (2) */
 }
 
@@ -159,21 +165,21 @@ Site-wide Default Values
 .btn-flat {
   text-decoration: none;
   font-weight: bold;
-  color: #5cacc1;
+  color: #4e9dca;
   padding: 1rem 2rem;
   border-radius: 50px;
   /* For Neumorphism Effect - Citation (2) */
-  background-color: white;
-  -webkit-box-shadow: 9px 9px 16px #f2f2f2, -9px -9px 16px white;
-  box-shadow: 9px 9px 16px #f2f2f2, -9px -9px 16px white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 9px 9px 16px #dbdbdb, -9px -9px 16px white;
+  box-shadow: 9px 9px 16px #dbdbdb, -9px -9px 16px white;
   /* For Neumorphism Effect  - Citation (2) */
 }
 
 .btn-flat:hover {
   /* Adapted from (2) */
-  background-color: white;
-  -webkit-box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
-  box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
+  box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
   /* Adapted from (2) */
 }
 
@@ -185,7 +191,10 @@ footer {
   display: grid;
       grid-template-columns: 1fr 3fr 1fr;
       grid-template-areas: " footer-left . footer-right ";
-  background-color: #f2f2f2;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 4px white;
+          box-shadow: 1px 1px 4px white;
+  border-top: 1px solid white;
   font-weight: bold;
   padding: 4rem 4rem;
   margin-top: 7rem;
@@ -226,12 +235,12 @@ footer a {
   font-family: "nunito-sans", sans-serif;
   margin-top: none;
   font-weight: bold;
-  color: #5cacc1;
+  color: #4e9dca;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #4aa3ba;
+  color: #3b92c4;
 }
 
 .grid-container {
@@ -288,9 +297,9 @@ footer a:hover {
     padding-bottom: 3rem;
     margin-bottom: 2rem;
     /* Adapted from (2) */
-    background-color: white;
-    -webkit-box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
-    box-shadow: 4px 4px 8px inset #f2f2f2, -4px -4px 8px inset white;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
+    box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
     /* Adapted from (2) */
   }
   [class^=tile-] h5 {
@@ -327,7 +336,7 @@ body {
   margin: 0;
   background-color: #fff;
   background-color: #E0E5EC;
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 /* 04-07-2020: New Layout Adjustments */
@@ -384,7 +393,7 @@ em {
 }
 
 [class^=nav-] a:hover {
-  color: #5cacc1;
+  color: #4e9dca;
   cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

@@ -69,7 +69,9 @@
     grid-template-areas:
     " footer-left . footer-right ";
     
-    background-color: $shadow-color;
+    background-color: $background-color;
+    box-shadow: 1px 1px 4px lighten($shadow-color, 50%);
+    border-top: 1px solid white;
     font-weight: bold;
     padding: 4rem 4rem;
     margin-top: 7rem;

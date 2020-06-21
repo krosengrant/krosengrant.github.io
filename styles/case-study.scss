@@ -63,7 +63,7 @@ td              { padding: 1rem 1.5rem 1rem 0; }             // Row content
 .btn-link { @include btn-link(); }
 .btn-next { @include btn-next(); }
 
-// Button hover statess
+// Button hover states
 .btn-link:hover { @include material-shadow(); background-color: $hover-color; }
 .btn-next:hover { color: $hover-color; }
 

@@ -10,6 +10,7 @@
 .nav-work       { grid-area: nav-work; padding: 0 1rem; }
 .nav-contact    { grid-area: nav-contact; padding: 0 1rem; }
 .active         { padding-bottom: .5rem; border-bottom: 4px solid $shadow-color; color: $accent-color; }   // Active Navigation Link
+.active         { padding-bottom: .5rem; border-bottom: 4px solid lighten($accent-color, 35%); color: $accent-color; }   
 
 /* Project Tiles */
 /* Add new project tile here */

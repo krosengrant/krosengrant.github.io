@@ -24,9 +24,9 @@
 
 .page-overview {
   /* For Neumorphism Effect - Citation (2) */
-  background-color: white;
-  -webkit-box-shadow: 9px 9px 16px #f2f2f2, -9px -9px 16px white;
-  box-shadow: 9px 9px 16px #f2f2f2, -9px -9px 16px white;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 9px 9px 16px #dbdbdb, -9px -9px 16px white;
+  box-shadow: 9px 9px 16px #dbdbdb, -9px -9px 16px white;
   /* For Neumorphism Effect  - Citation (2) */
   padding: 2rem;
   border-radius: 30px;
@@ -132,13 +132,13 @@ td {
 
 /* Other Styling */
 [class^="img-"] img {
-  -webkit-box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
-          box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
+  -webkit-box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
 }
 
 [class^="img-1"] {
-  -webkit-box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
-          box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
+  -webkit-box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
 }
 
 /* Button Styling */
@@ -147,7 +147,7 @@ td {
   padding: .75rem 2rem;
   margin-top: 4rem;
   border-radius: 40px;
-  background-color: #5cacc1;
+  background-color: #4e9dca;
   font-weight: bold;
   color: white;
   letter-spacing: 1.25px;
@@ -161,17 +161,17 @@ td {
   border-radius: 25px;
   font-weight: bold;
   font-size: 1.1rem;
-  color: #5cacc1;
+  color: #4e9dca;
 }
 
 .btn-link:hover {
-  -webkit-box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
-          box-shadow: 0 4px 6px #f2f2f2, 0 1px 2px white;
-  background-color: #4aa3ba;
+  -webkit-box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
+          box-shadow: 0 4px 6px #dbdbdb, 0 1px 2px white;
+  background-color: #3b92c4;
 }
 
 .btn-next:hover {
-  color: #4aa3ba;
+  color: #3b92c4;
 }
 
 /* Contact Page */

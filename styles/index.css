@@ -36,7 +36,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
 
 .grid-body {
   background-color: #E0E5EC;
-  background-color: white;
+  background-color: whitesmoke;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-areas: " . page-title . " " . tile-tmc . " " . tile-quicklit . " " . tile-wtw . ";
