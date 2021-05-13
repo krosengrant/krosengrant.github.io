@@ -44,6 +44,20 @@
       grid-template-areas: " . page-title . " " . page-content . ";
 }
 
+@media only screen and (max-width: 425px) {
+  .page-content {
+    padding: 10px;
+  }
+  .page-overview {
+    padding: 0.5rem;
+    margin: 1rem;
+  }
+  .page-overview td {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
 /* Overview */
 table {
   margin-bottom: 2rem;
@@ -53,7 +67,7 @@ table {
 td:first-child {
   font-weight: bold;
   text-align: right;
-  font-family: "cronos-pro", sans-serif;
+  font-family: "roboto mono", sans-serif;
 }
 
 td {
@@ -150,7 +164,7 @@ td {
   background-color: #4e9dca;
   font-weight: bold;
   color: white;
-  letter-spacing: 1.25px;
+  letter-spacing: 1.2px;
   font-family: "nunito-sans", sans-serif;
 }
 

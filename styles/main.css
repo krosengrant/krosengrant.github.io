@@ -191,7 +191,7 @@ footer {
   grid-area: footer;
   display: -ms-grid;
   display: grid;
-      grid-template-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
       grid-template-areas: " footer-left . footer-right ";
   background-color: whitesmoke;
   -webkit-box-shadow: 1px 1px 4px white;
@@ -228,7 +228,7 @@ footer .footer-date {
 }
 
 footer p {
-  font-family: "cronos-pro", sans-serif;
+  font-family: "roboto mono", sans-serif;
   margin-bottom: .25rem;
   color: rgba(15, 15, 15, 0.9);
 }
@@ -256,8 +256,8 @@ footer a:hover {
 .grid-body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 3fr 1fr;
-      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-columns: 1fr 9fr 1fr;
+      grid-template-columns: 1fr 9fr 1fr;
   grid-row-gap: 6rem;
 }
 
@@ -265,8 +265,8 @@ footer a:hover {
   display: -ms-grid;
   display: grid;
   padding: 2rem 4rem;
-  -ms-grid-columns: 2fr 6fr 2fr 1fr;
-      grid-template-columns: 2fr 6fr 2fr 1fr;
+  -ms-grid-columns: 2fr 1fr 2fr 1fr;
+      grid-template-columns: 2fr 1fr 2fr 1fr;
       grid-template-areas: " nav-home nav-home nav-work nav-contact ";
 }
 
@@ -318,9 +318,15 @@ footer a:hover {
   }
   footer {
     text-align: center;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: " footer-left ";
   }
   footer .footer-right {
     display: none;
+  }
+  .btn-next {
+    display: block;
   }
 }
 
@@ -329,7 +335,7 @@ footer a:hover {
 /* Colors */
 /* Color Archive */
 * {
-  font-family: "roboto mono";
+  font-family: "roboto mono", sans-serif;
   color: #0f0f0f;
   letter-spacing: 1px;
 }

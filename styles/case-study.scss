@@ -14,6 +14,21 @@
     " . page-content . "
 }
 
+// Overrides for Small to Large Mobile Devices
+@media only screen and (max-width: 425px) {
+    .page-content {
+        padding: 10px;
+    }
+    .page-overview {
+        padding: 0.5rem;
+        margin: 1rem;
+        td {
+            padding: 5px;
+            font-size: 14px;
+        }
+    }
+}
+
 /* Overview */
 table           { margin-bottom: 2rem; margin: 0 auto; }     // Overview table
 td:first-child  { font-weight: bold; text-align: right; font-family: $font-stack; }    // Row label
