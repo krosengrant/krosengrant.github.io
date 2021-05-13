@@ -35,14 +35,14 @@ footer          { grid-area: footer; @include footer(); }
 
 .grid-body {
     display: grid;
-    grid-template-columns: 1fr 9fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-row-gap: 6rem;    // 04-06-2020: was 3rem
 }
 
 .top-nav {
     display: grid;
     padding: 2rem 4rem;
-    grid-template-columns: 2fr 1fr 2fr 1fr; // 04-08-2020: was 2fr 8fr 1fr 1fr
+    grid-template-columns: 2fr 6fr 2fr 1fr; // 04-08-2020: was 2fr 8fr 1fr 1fr
     grid-template-areas: 
     " nav-home nav-home nav-work nav-contact "
 }
@@ -54,6 +54,7 @@ footer          { grid-area: footer; @include footer(); }
     .grid-container { grid-row-gap: 0rem; }
 
     .grid-body {
+        
         grid-template-columns: 1fr;
         grid-row-gap: 1rem;
         padding: 0 1.5rem;
@@ -74,16 +75,6 @@ footer          { grid-area: footer; @include footer(); }
 
     [class^=tile-] { @include project-tile-small(); }
 
-    footer { 
-        text-align: center; 
-        grid-template-columns: 1fr;
-        grid-template-areas:
-        " footer-left ";
-        .footer-right { display: none; } 
-    }
-
-    .btn-next {
-        display: block;
-    }
+    footer { text-align: center; .footer-right { display: none; } }
 }
 
