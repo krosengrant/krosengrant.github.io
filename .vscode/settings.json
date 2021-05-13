@@ -6,5 +6,6 @@
         "themercerclubnyc",
         "tile",
         "tile quicklit"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
