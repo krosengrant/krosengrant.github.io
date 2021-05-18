@@ -63,7 +63,7 @@ footer          { grid-area: footer; @include footer(); }
     .top-nav {
         padding: .5rem;
         margin: 0rem;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto auto;
         grid-template-areas:
         " nav-home nav-home "
         " nav-work nav-contact ";

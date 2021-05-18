@@ -287,8 +287,8 @@ footer a:hover {
   .top-nav {
     padding: .5rem;
     margin: 0rem;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
         grid-template-areas: " nav-home nav-home " " nav-work nav-contact ";
   }
   /* Navigation Buttons on mobile*/
