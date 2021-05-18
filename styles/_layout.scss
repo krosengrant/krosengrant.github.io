@@ -42,11 +42,10 @@ footer          { grid-area: footer; @include footer(); }
 .top-nav {
     display: grid;
     padding: 2rem 4rem;
-    grid-template-columns: 2fr 6fr 2fr 1fr; // 04-08-2020: was 2fr 8fr 1fr 1fr
+    grid-template-columns: auto 1fr auto auto; // 04-08-2020: was 2fr 8fr 1fr 1fr
     grid-template-areas: 
     " nav-home nav-home nav-work nav-contact "
 }
-
 
 
 // Overrides for Small to Large Mobile Devices
@@ -82,8 +81,17 @@ footer          { grid-area: footer; @include footer(); }
         " footer-right footer-right  footer-right ";
         text-align: center; 
         .footer-right { text-align: center; }
+    }
 
-        // .footer-right { display: none; } 
+    .project-img { width: 100%; }
+    .grid-body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        /* [ Add a new project tile here ] */
+        " page-title "
+        " tile-tmc "
+        " tile-quicklit "
+        " tile-wtw "
     }
 }
 

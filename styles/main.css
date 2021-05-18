@@ -265,8 +265,8 @@ footer a:hover {
   display: -ms-grid;
   display: grid;
   padding: 2rem 4rem;
-  -ms-grid-columns: 2fr 6fr 2fr 1fr;
-      grid-template-columns: 2fr 6fr 2fr 1fr;
+  -ms-grid-columns: auto 1fr auto auto;
+      grid-template-columns: auto 1fr auto auto;
       grid-template-areas: " nav-home nav-home nav-work nav-contact ";
 }
 
@@ -330,6 +330,14 @@ footer a:hover {
   }
   footer .footer-right {
     text-align: center;
+  }
+  .project-img {
+    width: 100%;
+  }
+  .grid-body {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: " page-title " " tile-tmc " " tile-quicklit " " tile-wtw ";
   }
 }
 

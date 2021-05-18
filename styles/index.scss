@@ -26,6 +26,32 @@ Note: Add project tiles twice, once for desktop and once for mobile.
     " . tile-wtw . "
 }
 
+
+//Overrides for tablets
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+    .top-nav {
+        grid-template-columns: auto auto auto auto;
+        justify-items: center;
+        text-align: center;
+        .active {
+            border: none;
+        }
+    }
+    .grid-body {
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-areas:
+        " . page-title . "
+        " . tile-tmc . "
+        " . tile-quicklit . "
+        " . tile-wtw . ";
+        
+    }
+    footer {
+        grid-template-columns: auto 0.1fr auto;
+        grid-area: " footer-left . footer-right ";
+    }
+}
+
 // Overrides for Small to Large Mobile Devices
 @media only screen and (max-width: 425px) {
     .project-img { width: 100%; }
