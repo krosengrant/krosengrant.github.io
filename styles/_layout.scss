@@ -72,7 +72,7 @@ footer          { grid-area: footer; @include footer(); }
     /* Navigation Buttons on mobile*/
     .nav-home, .nav-work, .nav-about, .nav-contact { text-align: center; padding: 0rem; }
 
-    [class^=tile-] { @include project-tile-small(); text-align: center; padding: 45px; margin: 10px; }
+    [class^=tile-] { @include project-tile-small(); text-align: center; padding: 1rem 0.5rem 4rem 0.5rem; margin: 10px; }
 
     footer { 
         display: grid;
@@ -91,7 +91,10 @@ footer          { grid-area: footer; @include footer(); }
         " page-title "
         " tile-tmc "
         " tile-quicklit "
-        " tile-wtw "
+        " tile-wtw ";
+        .btn-flat {
+            padding: 0.8em 1.2rem;
+        }
     }
 }
 

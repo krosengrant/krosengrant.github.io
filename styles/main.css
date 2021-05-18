@@ -307,7 +307,7 @@ footer a:hover {
     box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
     /* Adapted from (2) */
     text-align: center;
-    padding: 45px;
+    padding: 1rem 0.5rem 4rem 0.5rem;
     margin: 10px;
   }
   [class^=tile-] h5 {
@@ -338,6 +338,9 @@ footer a:hover {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: " page-title " " tile-tmc " " tile-quicklit " " tile-wtw ";
+  }
+  .grid-body .btn-flat {
+    padding: 0.8em 1.2rem;
   }
 }
 
