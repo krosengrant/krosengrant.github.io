@@ -51,10 +51,10 @@ footer          { grid-area: footer; @include footer(); }
 
 // Overrides for Small to Large Mobile Devices
 @media only screen and (max-width: 425px) {
+    * { font-size: 0.98rem; }
     .grid-container { grid-row-gap: 0rem; }
 
     .grid-body {
-        
         grid-template-columns: 1fr;
         grid-row-gap: 1rem;
         padding: 0 1.5rem;
@@ -73,8 +73,17 @@ footer          { grid-area: footer; @include footer(); }
     /* Navigation Buttons on mobile*/
     .nav-home, .nav-work, .nav-about, .nav-contact { text-align: center; padding: 0rem; }
 
-    [class^=tile-] { @include project-tile-small(); }
+    [class^=tile-] { @include project-tile-small(); text-align: center; padding: 45px; margin: 10px; }
 
-    footer { text-align: center; .footer-right { display: none; } }
+    footer { 
+        display: grid;
+        grid-template-areas:
+        " footer-left footer-left footer-left " 
+        " footer-right footer-right  footer-right ";
+        text-align: center; 
+        .footer-right { text-align: center; }
+
+        // .footer-right { display: none; } 
+    }
 }
 

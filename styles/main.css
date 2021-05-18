@@ -271,6 +271,9 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 425px) {
+  * {
+    font-size: 0.98rem;
+  }
   .grid-container {
     grid-row-gap: 0rem;
   }
@@ -303,6 +306,9 @@ footer a:hover {
     -webkit-box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
     box-shadow: 4px 4px 8px inset #dbdbdb, -4px -4px 8px inset white;
     /* Adapted from (2) */
+    text-align: center;
+    padding: 45px;
+    margin: 10px;
   }
   [class^=tile-] h5 {
     margin-bottom: .5rem;
@@ -317,10 +323,13 @@ footer a:hover {
     margin-top: 2px;
   }
   footer {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: " footer-left footer-left footer-left "  " footer-right footer-right  footer-right ";
     text-align: center;
   }
   footer .footer-right {
-    display: none;
+    text-align: center;
   }
 }
 
