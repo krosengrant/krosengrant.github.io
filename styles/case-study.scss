@@ -113,7 +113,7 @@ td              { padding: 1rem 1.5rem 1rem 0; }             // Row content
     * { font-size: 0.95rem; }
 
     .top-nav {
-        grid-template-columns: 1fr 0.5fr 1fr 1fr;
+        grid-template-columns: auto auto;
     }
     .page-overview {
         margin: 0.5rem;

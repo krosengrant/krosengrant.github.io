@@ -38,7 +38,7 @@ Note: Add project tiles twice, once for desktop and once for mobile.
         }
     }
     .grid-body {
-        grid-template-columns: 0.1fr 1fr 0.1fr;
+        grid-template-columns: 2rem auto 2rem;
         grid-template-areas:
         " . page-title . "
         " . tile-tmc . "
@@ -56,12 +56,16 @@ Note: Add project tiles twice, once for desktop and once for mobile.
 @media only screen and (max-width: 425px) {
     .project-img { width: 100%; }
     .grid-body {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-areas:
         /* [ Add a new project tile here ] */
         " page-title "
         " tile-tmc "
         " tile-quicklit "
         " tile-wtw "
+    }
+    .top-nav {
+        grid-template-columns: auto auto;
+        justify-items: center;
     }
 }

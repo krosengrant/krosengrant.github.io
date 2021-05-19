@@ -253,8 +253,8 @@ td {
     font-size: 0.95rem;
   }
   .top-nav {
-    -ms-grid-columns: 1fr 0.5fr 1fr 1fr;
-        grid-template-columns: 1fr 0.5fr 1fr 1fr;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
   }
   .page-overview {
     margin: 0.5rem;

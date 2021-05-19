@@ -53,8 +53,8 @@ Note: Add project tiles twice, once for desktop and once for mobile.
     border: none;
   }
   .grid-body {
-    -ms-grid-columns: 0.1fr 1fr 0.1fr;
-        grid-template-columns: 0.1fr 1fr 0.1fr;
+    -ms-grid-columns: 2rem auto 2rem;
+        grid-template-columns: 2rem auto 2rem;
         grid-template-areas: " . page-title . " " . tile-tmc . " " . tile-quicklit . " " . tile-wtw . ";
   }
   footer {
@@ -69,9 +69,14 @@ Note: Add project tiles twice, once for desktop and once for mobile.
     width: 100%;
   }
   .grid-body {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
         grid-template-areas: " page-title " " tile-tmc " " tile-quicklit " " tile-wtw ";
+  }
+  .top-nav {
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    justify-items: center;
   }
 }
 /*# sourceMappingURL=index.css.map */
